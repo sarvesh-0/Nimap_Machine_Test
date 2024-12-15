@@ -1,118 +1,83 @@
-Nimap Java Machine Test (Rest APIs for CRUD Operations || Category - Product one to many relationship)
-Spring Boot Project: Nimap Java Machine Test
+# **Nimap Java Machine Test**
 
-Description
+## **Overview**
+This is a Spring Boot application that demonstrates CRUD (Create, Read, Update, Delete) operations on a MySQL database. The project is built using Hibernate for ORM, JPA for data persistence, and is configured to use a MySQL database.
 
-This is a Spring Boot-based web application designed for the Nimap Java Machine Test. The application leverages Hibernate ORM for database operations and MySQL as the database. The project demonstrates the implementation of CRUD operations, REST APIs, and database interaction using JPA.
+---
 
-Features
+## **Features**
+- Implements CRUD operations.
+- Follows RESTful API principles.
+- Uses Spring Data JPA for database interaction.
+- Configurable database connectivity using `application.properties`.
 
-CRUD operations for managing entities.
+---
 
-Integration with MySQL using Hibernate and JPA.
+## **Technologies Used**
+- **Backend**: Spring Boot 3.3.6, Hibernate, JPA  
+- **Database**: MySQL  
+- **Tools**: Maven, H2 Console, Postman (for API testing)
 
-REST API endpoints for communication.
+---
 
-Configurable database connectivity.
+## **Requirements**
+- **Java**: JDK 17 or higher  
+- **Database**: MySQL 8.0 or higher  
+- **Build Tool**: Maven 3.8 or higher  
+- **IDE**: IntelliJ IDEA / Eclipse / Spring Tool Suite  
 
-Technologies Used
+---
 
-Backend: Spring Boot, Hibernate, JPA
+## **Setup Instructions**
 
-Database: MySQL
-
-Dependencies: Maven, Spring Data JPA, MySQL Connector
-
-Build Tool: Maven
-
-Prerequisites
-
-Java 17 or later
-
-MySQL 8.0 or later
-
-Maven 3.8 or later
-
-IDE (e.g., IntelliJ IDEA, Eclipse, Spring Tool Suite)
-
-Installation and Setup
-
-Clone the repository:
-
-git clone https://github.com/your-repo/nimap-java-machine-test.git
-
-Navigate to the project directory:
-
-cd nimap-java-machine-test
-
-Configure the database in src/main/resources/application.properties:
-
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+```
+### 2. Configure the Database
+Create a MySQL database:
+```sql
+Copy code
+CREATE DATABASE your_database_name;
+```
+## Update the application.properties file:
+```properties
+Copy code
 spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name
 spring.datasource.username=root
 spring.datasource.password=your_password
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
 spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
-
-Build the project using Maven:
-
+spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
+```
+###3. Build the Application
+Open the project in your IDE.
+Run the following Maven command to build:
+```bash
+Copy code
 mvn clean install
-
-Run the application:
-
+```
+###4. Run the Application
+-Start the Spring Boot application:
+```bash
+Copy code
 mvn spring-boot:run
+The application will run on http://localhost:8080.
+```
+###5. Test the Application
+-Use Postman to test the API endpoints.
 
-Access the application:
-
-API endpoints: http://localhost:8080/api
-
-Database Setup
-
-Log in to MySQL:
-
-mysql -u root -p
-
-Create the database:
-
-CREATE DATABASE your_database_name;
-
-Ensure the user root has access:
-
-GRANT ALL PRIVILEGES ON your_database_name.* TO 'root'@'localhost';
-FLUSH PRIVILEGES;
-
-
-
-Common Issues and Troubleshooting
-
-"Access denied for user 'root'@'localhost'"
-
-Ensure the credentials in application.properties are correct.
-
-Reset the MySQL root password if necessary:
-
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_password';
-FLUSH PRIVILEGES;
-
-"Unable to connect to MySQL"
-
-Verify that the MySQL server is running on localhost and port 3306.
-
-Test the connection with a MySQL client tool.
+API Endpoints
+Method	Endpoint	Description
+GET	/api/your-endpoint	Retrieve all data
+GET	/api/your-endpoint/{id}	Retrieve by ID
+POST	/api/your-endpoint	Create new record
+PUT	/api/your-endpoint/{id}	Update existing record
+DELETE	/api/your-endpoint/{id}	Delete record
+Contributing
+Contributions are welcome! Please fork the repository and create a pull request for any feature additions or bug fixes.
 
 License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-Contact
-
-For any inquiries, please contact:
-
-Name: Sarvesh Teware
-
-Email: sarveshteware651@gmail.com
-
-LinkedIn: Sarvesh Teware
-
-GitHub: Sarvesh-0
+This project is licensed under the MIT License.
