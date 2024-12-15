@@ -81,3 +81,10 @@ Contributions are welcome! Please fork the repository and create a pull request 
 
 License
 This project is licensed under the MIT License.
+
+##Contact
+For queries or feedback, please contact:
+Sarvesh Teware
+Email: sarveshteware651@gmail.com
+LinkedIn: linkedin.com/in/sarvesh-teware
+GitHub: github.com/sarvesh-0
