@@ -52,22 +52,21 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
 ```
-###3. Build the Application
+### 3. Build the Application
 Open the project in your IDE.
 Run the following Maven command to build:
 ```bash
 Copy code
 mvn clean install
 ```
-###4. Run the Application
+### 4. Run the Application
 -Start the Spring Boot application:
 ```bash
 Copy code
 mvn spring-boot:run
 The application will run on http://localhost:8080.
 ```
-###5. Test the Application
--Use Postman to test the API endpoints.
+
 
 
 ## Database Initialization
