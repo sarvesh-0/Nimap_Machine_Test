@@ -1,0 +1,23 @@
+# Spring Application Name
+spring.application.name=NimapJavaMachineTest
+
+# Oracle Database Configuration
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:orcl
+spring.datasource.username=hr
+spring.datasource.password=hr
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+
+# JPA/Hibernate Configuration
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.database-platform=org.hibernate.dialect.Oracle10gDialect
+
+# Spring H2 Console (Enable only if using H2 for testing)
+spring.h2.console.enabled=false
+
+# Server Configuration
+server.port=8080
+
+# Default Pageable Size
+spring.data.web.pageable.default-page-size=10

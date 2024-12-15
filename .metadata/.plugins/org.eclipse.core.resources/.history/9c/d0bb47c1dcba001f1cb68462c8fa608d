@@ -1,0 +1,17 @@
+package com.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+
+import com.dao.CategoryRepository;
+import com.model.Category;
+
+public class CategoryService {
+	@Autowired
+	private CategoryRepository categoryRepo;
+	
+	public Page<Category> getAllCategories(int page, int size){
+		return categoryRepo.findAll(PageRequest.of(page, size));
+	}
+}
