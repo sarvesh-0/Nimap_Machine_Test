@@ -38,12 +38,10 @@ cd your-repo-name
 ### 2. Configure the Database
 Create a MySQL database:
 ```sql
-Copy code
 CREATE DATABASE machine_test;
 ```
 ## Update the application.properties file according to your setup:
 ```properties
-Copy code
 spring.datasource.url=jdbc:mysql://localhost:3306/machine_test
 spring.datasource.username=root
 spring.datasource.password=your_password
@@ -56,13 +54,11 @@ spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
 Open the project in your IDE.
 Run the following Maven command to build:
 ```bash
-Copy code
 mvn clean install
 ```
 ### 4. Run the Application
 -Start the Spring Boot application:
 ```bash
-Copy code
 mvn spring-boot:run
 The application will run on http://localhost:8080.
 ```
